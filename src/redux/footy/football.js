@@ -1,4 +1,4 @@
-const FETCH_FOOTBALL_DATA = 'FETCH_FOOTBALL_DATA';
+const FETCH_FOOTBALL_DATA = 'FETCHFOOTBALLDATA/FOOTBALL/FETCH';
 
 const initialState = { data: [] };
 
