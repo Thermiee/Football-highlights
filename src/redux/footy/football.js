@@ -1,6 +1,6 @@
 const FETCH_FOOTBALL_DATA = 'FETCHFOOTBALLDATA/FOOTBALL/FETCH';
 
-const initialState = { data: [] };
+const initialState = { matches: [] };
 
 export const fetchFootballData = (payload) => ({
   type: FETCH_FOOTBALL_DATA,
@@ -10,10 +10,8 @@ export const fetchFootballData = (payload) => ({
 const footballReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case FETCH_FOOTBALL_DATA:
-      return {
-        ...state,
-        data: payload,
-      };
+      return { matches: [...payload] };
+
     default:
       return state;
   }
