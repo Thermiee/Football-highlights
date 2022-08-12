@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import MatchCard from '../components/MatchCard';
+import './matchPage.css';
 
 const MatchPage = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const MatchPage = () => {
 
     <div>
       <h1>Match Page</h1>
-      <div>
+      <div className="mathcard-img">
         <img src="https://c.tenor.com/NU5YIC1HLyIAAAAC/lingard-celebration.gif" alt="lingard dance " />
       </div>
       <div>
