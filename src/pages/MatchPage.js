@@ -21,7 +21,7 @@ const MatchPage = () => {
       <div>
         <h1>List of available Matches</h1>
       </div>
-      <div>
+      <div className="mathcard-body">
         { data.map((match) => (
           <MatchCard
             key={match.id}

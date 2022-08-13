@@ -1,5 +1,40 @@
-.matchcard-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.match-card-thumbnail img {
+    width: 50%;
 }
+
+.mathcard-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.match-card {
+    width: 40%;
+    margin: 10px;
+    display: flex;
+
+        border: 1px solid #e7e7e7;
+        border-radius: 0;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+        padding: 10px 10px;
+}
+
+.match-card-thumbnail {
+    width: 90%;
+}
+
+.match-card-thumbnail h3 {
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.mathcard-img img {
+    width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+    .match-card {
+        width: 100%;
+    }
+}
+    

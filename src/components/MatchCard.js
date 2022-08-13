@@ -21,11 +21,9 @@ const MatchCard = (props) => {
     >
       <div className="match-card-thumbnail">
         <img src={thumbnail} alt={title} />
-      </div>
-      <div className="match-card-title">
         <h3>{title}</h3>
-        <BsArrowRightCircle />
       </div>
+      <BsArrowRightCircle />
     </div>
 
   );
