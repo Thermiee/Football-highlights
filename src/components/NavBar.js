@@ -5,6 +5,7 @@ import { BiFootball } from 'react-icons/bi/';
 const NavBar = () => (
   <div className="navbar">
     <BiFootball />
+    {' '}
     Football Highlights
   </div>
 );

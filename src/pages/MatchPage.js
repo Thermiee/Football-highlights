@@ -10,30 +10,35 @@ const MatchPage = () => {
 
   return (
 
-    <div>
-      <h1>Match Page</h1>
-      <div className="mathcard-img">
-        <img src="https://c.tenor.com/NU5YIC1HLyIAAAAC/lingard-celebration.gif" alt="lingard dance " />
+    <>
+      <h1 className="header-title">Match Page</h1>
+      <div className="header">
+        <div className="mathcard-img">
+          <img src="https://c.tenor.com/NU5YIC1HLyIAAAAC/lingard-celebration.gif" alt="lingard dance " />
+        </div>
+        <div>
+          <h3> Welcome</h3>
+        </div>
       </div>
       <div>
-        <h3> Welcome</h3>
+        <div>
+          <h1 className="header-title">List of available Matches</h1>
+        </div>
+        <div className="mathcard-body">
+
+          {data.map((match) => (
+            <MatchCard
+              key={match.id}
+              title={match.title}
+              thumbnail={match.thumbnail}
+              onClick={() => {
+                navigate(`/match/${match.id}`);
+              }}
+            />
+          ))}
+        </div>
       </div>
-      <div>
-        <h1>List of available Matches</h1>
-      </div>
-      <div className="mathcard-body">
-        { data.map((match) => (
-          <MatchCard
-            key={match.id}
-            title={match.title}
-            thumbnail={match.thumbnail}
-            onClick={() => {
-              navigate(`/match/${match.id}`);
-            }}
-          />
-        ))}
-      </div>
-    </div>
+    </>
 
   );
 };
