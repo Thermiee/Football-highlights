@@ -1,6 +1,6 @@
-const fetchHighlightsApi = () => async (dispatch) => {
+const fetchHighlightsApi = async (title) => {
   try {
-    const api = await fetch('https://www.scorebat.com/video-api/v1/${title}');
+    const api = await fetch(`https://www.scorebat.com//${title}//`);
     const response = await api.json();
     return response;
   } catch (err) {

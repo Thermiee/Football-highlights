@@ -16,9 +16,6 @@ const MatchPage = () => {
         <div className="mathcard-img">
           <img src="https://c.tenor.com/NU5YIC1HLyIAAAAC/lingard-celebration.gif" alt="lingard dance " />
         </div>
-        <div>
-          <h3> Welcome</h3>
-        </div>
       </div>
       <div>
         <div>
@@ -28,11 +25,11 @@ const MatchPage = () => {
 
           {data.map((match) => (
             <MatchCard
-              key={match.id}
+              key={match.title}
               title={match.title}
               thumbnail={match.thumbnail}
               onClick={() => {
-                navigate(`/matchHighlights/${match.title}`);
+                navigate('/matchHighlights', { state: { title: match.title } });
               }}
             />
           ))}
