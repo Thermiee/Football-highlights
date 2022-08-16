@@ -32,7 +32,7 @@ const MatchPage = () => {
               title={match.title}
               thumbnail={match.thumbnail}
               onClick={() => {
-                navigate(`/match/${match.id}`);
+                navigate(`/matchHighlights/${match.title}`);
               }}
             />
           ))}
