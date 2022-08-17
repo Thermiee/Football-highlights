@@ -6,7 +6,7 @@ const fetchMatchApi = () => async (dispatch) => {
     const data = await response.json();
     dispatch(fetchFootballData(data));
   } catch (error) {
-    console.log(error);
+    throw new Error(err.message);
   }
 };
 
