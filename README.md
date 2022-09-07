@@ -55,12 +55,6 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Acknowledgments
-
-Thank you Microverse for the opportunity!
-
-Design From [Nelson Sakwa](https://www.behance.net/gallery/31579789/Ballhead-App-%28Free-PSDs%29)
-
 ## Show your support
 
 Give a ⭐️ if you like this project!
