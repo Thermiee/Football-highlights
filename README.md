@@ -2,7 +2,7 @@
 
 # Football-Hightlights
 
-> "Anime-World" is a website show list of animes and show different facts about them.
+> "Football-Highlights" is a website that shows list of recently played matches and the highlights of them.
 
 [Live Demo](https://lustrous-lebkuchen-41a060.netlify.app/)
 
@@ -15,7 +15,7 @@
 
 Start by cloning the repository.
 
-`git clone https://github.com/thermiee/React-Capstone.git`
+`git clone https://github.com/Thermiee/Football-highlights.git`
 
 Navigate to the created folder.
 
@@ -48,6 +48,7 @@ After the build you can host the `build` folder.
 
 - GitHub: [Thermiee](https://github.com/thermiee)
 - LinkedIn: [Emmanuel Jolugbo](https://www.linkedin.com/in/emmanuel-jolugbo/)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
