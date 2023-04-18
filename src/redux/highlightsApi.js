@@ -1,8 +1,10 @@
-const fetchHighlightsApi = async (title) => {
+import { fetchHighlightsData } from './highlights/highlights';
+
+const fetchHighlightsApi = () => async (dispatch) => {
   try {
-    const api = await fetch(`https://www.scorebat.com//${title}//`);
-    const response = await api.json();
-    return response;
+    const response = await fetch(`https://scorebat.com/video/${title}`);
+    const data = await response.json();
+    dispatch(fetchHighlightsData(data));
   } catch (err) {
     throw new Error(err.message);
   }
