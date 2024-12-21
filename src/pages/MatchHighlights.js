@@ -1,47 +1,36 @@
-// import React, { useEffect, useState } from 'react';
-// import { useLocation, useNavigate } from 'react-router-dom';
-// import { IoIosArrowBack } from 'react-icons/io';
-// import fetchHighlightsApi from '../redux/highlightsApi';
-// import HighlightsCard from '../components/HighlightsCard';
+import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import './matchPage.css';
 
-const MatchHighlights = () => (
-//   const navigate = useNavigate();
-//   const [response, setResponse] = useState();
-//   const { state } = useLocation();
-//   useEffect(() => {
-//     fetchHighlightsApi(state.title).then((resp) => setResponse(resp));
-//   }, [state.title]);
+const MatchHighlights = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { title, videos } = location.state || {}; // Retrieve data from state
 
-  <div className="navbar"> under construction due to the api not working</div>
-  // <>
-  //   <IoIosArrowBack
-  //     onClick={() => {
-  //       navigate('/');
-  //     }}
-  //   />
-  //   <div>MatchHighlights</div>
-  //   <div>
-  //     {' '}
-  //     { response
-  //     && (
-  //     <>
-  //       <h2>
-  //         {state.title}
-  //       </h2>
-  //       <div className="highlights-url">
-  //         <img src={response.url} alt={state.title} />
-  //       </div>
-  //     </>
-  //     )}
-  //     {(response && response.data.length > 0) && response.data.map((title) => (
-  //       <HighlightsCard
-  //         key={title.id}
-  //         title={title.title}
-  //         url={title.url}
-  //       />
-  //     ))}
-  //   </div>
-  // </>
+  if (!title || !videos) {
+    navigate('/');
+    return null;
+  }
 
-);
+  return (
+    <div className="match-highlights">
+      <h1 className="highlights-title">
+        Match Highlights:
+        {title}
+      </h1>
+      <div className="videos-container">
+        {videos.map((video) => (
+          <div key={video.id} className="video-card">
+            <h3>{video.title}</h3>
+            <div
+              className="video-embed"
+              dangerouslySetInnerHTML={{ __html: video.embed }}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export default MatchHighlights;
